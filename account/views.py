@@ -35,5 +35,8 @@ class SignInView(View):
 				
 				return JsonResponse({'message':'비밀번호가 틀렸어요.'},status=401)
 		
-		except KeyError:
 			return JsonResponse({'message':'미등록 이메일 입니다.'},status=400)
+
+		except KeyError:
+			return JsonResponse({"message":"INVALID_KEYS"},status=400)
+

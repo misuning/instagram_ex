@@ -12,7 +12,7 @@ class CommentView(View):
 		try:
 			Comment.objects.create(
 					name = data['name'],
-					text = data['text']
+					content = data['content']
 					)
 			return HttpResponse(status =200)
 			
